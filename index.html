@@ -1,129 +1,438 @@
-<!DOCTYPE html><html><head>
-  
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="images/gaa16605b72588e2946ca57bbc197-h_m4wv30wq.png" type="image/x-icon">
-  <meta name="description" content="Discover expert legal advice through our Telegram bot. Access articles and resources to navigate legal challenges effectively.">
-  <title>Legal Telegram Bot</title>
-  <link rel="stylesheet" href="css/mobirise2.css">
-  <link rel="stylesheet" href="css/mobirise-icons.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/style_1.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&amp;display=swap&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap"></noscript>
-  <link rel="stylesheet" href="css/mbr-additional.css" type="text/css">
-  
-  
-  
-  
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="images/gaa16605b72588e2946ca57bbc197-h_m4wv30wq.png" type="image/x-icon">
+    <meta name="description"
+          content="Юридическая Помощь Онлайн Ресублика Беларусь через бота в Телеграм.">
+    <title>Юридическая Помощь Онлайн Беларусь</title>
+    <link rel="stylesheet" href="css/mobirise2.css">
+    <link rel="stylesheet" href="css/mobirise-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style_1.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&amp;display=swap&amp;display=swap" as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap">
+    </noscript>
+    <link rel="stylesheet" href="css/mbr-additional.css" type="text/css">
+    <meta property="og:title" content="Юридическая Помощь Онлайн Беларусь">
+    <meta property="og:description" content="Помощь по правовым вопросам прямо в Телеграм">
+    <meta property="og:image" content="https://консультация.бел/images/law.jpg">
+    <meta property="og:url" content="https://консультация.бел">
+    <meta property="og:type" content="website">
+    <style>
+        .navbar-fixed-top {
+            top: auto;
+        }
 
+        #mobiriseBanner.container-banner {
+            height: 8rem;
+            opacity: 1;
+            -webkit-animation: 4s linear animationHeight;
+            -moz-animation: 4s linear animationHeight;
+            -o-animation: 4s linear animationHeight;
+            animation: 4s linear animationHeight;
+            transition: all 0.5s;
+        }
 
-<style>
-.navbar-fixed-top {
-  top: auto;
-}
-#mobiriseBanner.container-banner {
-  height: 8rem;
-  opacity: 1;
-  -webkit-animation: 4s linear animationHeight;
-  -moz-animation: 4s linear animationHeight;
-    -o-animation: 4s linear animationHeight;
-       animation: 4s linear animationHeight;
-       transition: all  0.5s;
-}
-#mobiriseBanner.container-banner.container-banner-closing {
-  pointer-events: none;
-  height: 0;
-  opacity: 0;
-  -webkit-animation: 0.5s linear animationClosing;
-  -moz-animation:  0.5s linear animationClosing;
-    -o-animation:  0.5s linear animationClosing;
-       animation:  0.5s linear animationClosing;
-}
-#mobiriseBanner .banner {
-  min-height: 8rem;
-  position:fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  padding: 10px;
-  opacity:1;
-  -webkit-animation: 4s linear animationBanner;
-  -moz-animation: 4s linear animationBanner;
-    -o-animation: 4s linear animationBanner;
-       animation: 4s linear animationBanner;
-  z-index: 1031;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#mobiriseBanner .banner p {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  animation: none;
-  visibility: visible;
-}
-#mobiriseBanner .buy-license {
-  text-decoration: underline;
-}
-#mobiriseBanner .banner .btn {
-  margin: 0.3rem 0.5rem;
-  animation: none;
-  visibility: visible;
-}
-.navbar.opened {
-    z-index: 1032;
-}
-@-webkit-keyframes animationBanner { 0% { opacity: 0; top: -8rem; } 75% { opacity: 0; top: -8rem; } 100% { opacity: 1; top: 0; } }
-@-moz-keyframes animationBanner { 0% { opacity: 0; top: -8rem; } 75% { opacity: 0; top: -8rem; } 100% { opacity: 1; top: 0; } }
-@-o-keyframes animationBanner { 0% { opacity: 0; top: -8rem; } 75% { opacity: 0; top: -8rem; } 100% { opacity: 1; top: 0; } }
-   @keyframes animationBanner { 0% { opacity: 0; top: -8rem; } 75% { opacity: 0; top: -8rem; } 100% { opacity: 1; top: 0; } }
-@-webkit-keyframes animationHeight { 0% { height: 0; } 75% { height: 0; } 100% { height: 8rem; } }
-@-moz-keyframes animationHeight { 0% { height: 0; } 75% { height: 0; } 100% { height: 8rem; } }
-@-o-keyframes animationHeight { 0% { height: 0; } 75% { height: 0; } 100% { height: 8rem; } }
-   @keyframes animationHeight { 0% { height: 0; } 75% { height: 0; } 100% { height: 8rem; } }
-   
-@-webkit-keyframes animationClosing { 0% { height: 8rem; opacity: 1; } 30% { height: 8rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-@-moz-keyframes animationClosing { 0% { height: 8rem; opacity: 1; } 30% { height: 8rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-@-o-keyframes animationClosing { 0% { height: 8rem; opacity: 1; } 30% { height: 8rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-@keyframes animationClosing { 0% { height: 8rem; opacity: 1; } 30% { height: 8rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+        #mobiriseBanner.container-banner.container-banner-closing {
+            pointer-events: none;
+            height: 0;
+            opacity: 0;
+            -webkit-animation: 0.5s linear animationClosing;
+            -moz-animation: 0.5s linear animationClosing;
+            -o-animation: 0.5s linear animationClosing;
+            animation: 0.5s linear animationClosing;
+        }
 
-@media(max-width: 767px) {
-  #mobiriseBanner.container-banner {
-    height: 12rem;
-  }
-  #mobiriseBanner .banner {
-    min-height: 12rem;
-  }
-  @-webkit-keyframes animationBanner { 0% { opacity: 0; top: -12rem; } 75% { opacity: 0; top: -12rem; } 100% { opacity: 1; top: 0; } }
-  @-moz-keyframes animationBanner { 0% { opacity: 0; top: -12rem; } 75% { opacity: 0; top: -12rem; } 100% { opacity: 1; top: 0; } }
-  @-o-keyframes animationBanner { 0% { opacity: 0; top: -12rem; } 75% { opacity: 0; top: -12rem; } 100% { opacity: 1; top: 0; } }
-    @keyframes animationBanner { 0% { opacity: 0; top: -12rem; } 75% { opacity: 0; top: -12rem; } 100% { opacity: 1; top: 0; } }
-  @-webkit-keyframes animationHeight { 0% { height: 0; } 75% { height: 0; } 100% { height: 12rem; } }
-  @-moz-keyframes animationHeight { 0% { height: 0; } 75% { height: 0; } 100% { height: 12rem; } }
-  @-o-keyframes animationHeight { 0% { height: 0; } 75% { height: 0; } 100% { height: 12rem; } }
-    @keyframes animationHeight { 0% { height: 0; } 75% { height: 0; } 100% { height: 12rem; } }
+        #mobiriseBanner .banner {
+            min-height: 8rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            padding: 10px;
+            opacity: 1;
+            -webkit-animation: 4s linear animationBanner;
+            -moz-animation: 4s linear animationBanner;
+            -o-animation: 4s linear animationBanner;
+            animation: 4s linear animationBanner;
+            z-index: 1031;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-  @-webkit-keyframes animationClosing { 0% { height: 12rem; opacity: 1; } 30% { height: 12rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-  @-moz-keyframes animationClosing { 0% { height: 12rem; opacity: 1; } 30% { height: 12rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-  @-o-keyframes animationClosing { 0% { height: 12rem; opacity: 1; } 30% { height: 12rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-  @keyframes animationClosing { 0% { height: 12rem; opacity: 1; } 30% { height: 12rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-}
-</style>
+        #mobiriseBanner .banner p {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            animation: none;
+            visibility: visible;
+        }
+
+        #mobiriseBanner .buy-license {
+            text-decoration: underline;
+        }
+
+        #mobiriseBanner .banner .btn {
+            margin: 0.3rem 0.5rem;
+            animation: none;
+            visibility: visible;
+        }
+
+        .navbar.opened {
+            z-index: 1032;
+        }
+
+        @-webkit-keyframes animationBanner {
+            0% {
+                opacity: 0;
+                top: -8rem;
+            }
+            75% {
+                opacity: 0;
+                top: -8rem;
+            }
+            100% {
+                opacity: 1;
+                top: 0;
+            }
+        }
+
+        @-moz-keyframes animationBanner {
+            0% {
+                opacity: 0;
+                top: -8rem;
+            }
+            75% {
+                opacity: 0;
+                top: -8rem;
+            }
+            100% {
+                opacity: 1;
+                top: 0;
+            }
+        }
+
+        @-o-keyframes animationBanner {
+            0% {
+                opacity: 0;
+                top: -8rem;
+            }
+            75% {
+                opacity: 0;
+                top: -8rem;
+            }
+            100% {
+                opacity: 1;
+                top: 0;
+            }
+        }
+
+        @keyframes animationBanner {
+            0% {
+                opacity: 0;
+                top: -8rem;
+            }
+            75% {
+                opacity: 0;
+                top: -8rem;
+            }
+            100% {
+                opacity: 1;
+                top: 0;
+            }
+        }
+
+        @-webkit-keyframes animationHeight {
+            0% {
+                height: 0;
+            }
+            75% {
+                height: 0;
+            }
+            100% {
+                height: 8rem;
+            }
+        }
+
+        @-moz-keyframes animationHeight {
+            0% {
+                height: 0;
+            }
+            75% {
+                height: 0;
+            }
+            100% {
+                height: 8rem;
+            }
+        }
+
+        @-o-keyframes animationHeight {
+            0% {
+                height: 0;
+            }
+            75% {
+                height: 0;
+            }
+            100% {
+                height: 8rem;
+            }
+        }
+
+        @keyframes animationHeight {
+            0% {
+                height: 0;
+            }
+            75% {
+                height: 0;
+            }
+            100% {
+                height: 8rem;
+            }
+        }
+
+        @-webkit-keyframes animationClosing {
+            0% {
+                height: 8rem;
+                opacity: 1;
+            }
+            30% {
+                height: 8rem;
+                opacity: 0.5;
+            }
+            100% {
+                height: 0;
+                opacity: 0;
+            }
+        }
+
+        @-moz-keyframes animationClosing {
+            0% {
+                height: 8rem;
+                opacity: 1;
+            }
+            30% {
+                height: 8rem;
+                opacity: 0.5;
+            }
+            100% {
+                height: 0;
+                opacity: 0;
+            }
+        }
+
+        @-o-keyframes animationClosing {
+            0% {
+                height: 8rem;
+                opacity: 1;
+            }
+            30% {
+                height: 8rem;
+                opacity: 0.5;
+            }
+            100% {
+                height: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes animationClosing {
+            0% {
+                height: 8rem;
+                opacity: 1;
+            }
+            30% {
+                height: 8rem;
+                opacity: 0.5;
+            }
+            100% {
+                height: 0;
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #mobiriseBanner.container-banner {
+                height: 12rem;
+            }
+
+            #mobiriseBanner .banner {
+                min-height: 12rem;
+            }
+
+            @-webkit-keyframes animationBanner {
+                0% {
+                    opacity: 0;
+                    top: -12rem;
+                }
+                75% {
+                    opacity: 0;
+                    top: -12rem;
+                }
+                100% {
+                    opacity: 1;
+                    top: 0;
+                }
+            }
+            @-moz-keyframes animationBanner {
+                0% {
+                    opacity: 0;
+                    top: -12rem;
+                }
+                75% {
+                    opacity: 0;
+                    top: -12rem;
+                }
+                100% {
+                    opacity: 1;
+                    top: 0;
+                }
+            }
+            @-o-keyframes animationBanner {
+                0% {
+                    opacity: 0;
+                    top: -12rem;
+                }
+                75% {
+                    opacity: 0;
+                    top: -12rem;
+                }
+                100% {
+                    opacity: 1;
+                    top: 0;
+                }
+            }
+            @keyframes animationBanner {
+                0% {
+                    opacity: 0;
+                    top: -12rem;
+                }
+                75% {
+                    opacity: 0;
+                    top: -12rem;
+                }
+                100% {
+                    opacity: 1;
+                    top: 0;
+                }
+            }
+            @-webkit-keyframes animationHeight {
+                0% {
+                    height: 0;
+                }
+                75% {
+                    height: 0;
+                }
+                100% {
+                    height: 12rem;
+                }
+            }
+            @-moz-keyframes animationHeight {
+                0% {
+                    height: 0;
+                }
+                75% {
+                    height: 0;
+                }
+                100% {
+                    height: 12rem;
+                }
+            }
+            @-o-keyframes animationHeight {
+                0% {
+                    height: 0;
+                }
+                75% {
+                    height: 0;
+                }
+                100% {
+                    height: 12rem;
+                }
+            }
+            @keyframes animationHeight {
+                0% {
+                    height: 0;
+                }
+                75% {
+                    height: 0;
+                }
+                100% {
+                    height: 12rem;
+                }
+            }
+
+            @-webkit-keyframes animationClosing {
+                0% {
+                    height: 12rem;
+                    opacity: 1;
+                }
+                30% {
+                    height: 12rem;
+                    opacity: 0.5;
+                }
+                100% {
+                    height: 0;
+                    opacity: 0;
+                }
+            }
+            @-moz-keyframes animationClosing {
+                0% {
+                    height: 12rem;
+                    opacity: 1;
+                }
+                30% {
+                    height: 12rem;
+                    opacity: 0.5;
+                }
+                100% {
+                    height: 0;
+                    opacity: 0;
+                }
+            }
+            @-o-keyframes animationClosing {
+                0% {
+                    height: 12rem;
+                    opacity: 1;
+                }
+                30% {
+                    height: 12rem;
+                    opacity: 0.5;
+                }
+                100% {
+                    height: 0;
+                    opacity: 0;
+                }
+            }
+            @keyframes animationClosing {
+                0% {
+                    height: 12rem;
+                    opacity: 1;
+                }
+                30% {
+                    height: 12rem;
+                    opacity: 0.5;
+                }
+                100% {
+                    height: 0;
+                    opacity: 0;
+                }
+            }
+        }
+    </style>
 </head>
 <body>
-  <section data-bs-version="5.1" class="menu menu6 cid-uxvqIEh45t" once="menu" id="menu-1-uxvqIEh45t">
-    
-
+<section data-bs-version="5.1" class="menu menu6 cid-uxvqIEh45t" once="menu" id="menu-1-uxvqIEh45t">
     <nav class="navbar navbar-dropdown opacityScrollOff navbar-fixed-top navbar-expand-lg">
         <div class="container-fluid">
             <div class="navbar-brand">
@@ -134,37 +443,36 @@
 				</span>
                 <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="#">Юридическая Консультация Онлайн Беларусь</a></span>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<div class="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
             <div class="collapse navbar-collapse opacityScrollOff" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-                        <a class="nav-link link text-black show display-4" href="#" aria-expanded="true">FAQ</a>
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                    <li class="nav-item">
+                        <a class="nav-link link text-black show display-4" href="#faq" aria-expanded="true">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="#" aria-expanded="false">Блог</a>
+                        <a class="nav-link link text-black display-4" href="#blog" aria-expanded="false">Блог</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-black show display-4" href="#" aria-expanded="true"><p>Контакты</p></a>
-                    </li></ul>
-                
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="https://t.me/belarus_law_support_bot">Получить консультацию</a></div>
+                        <a class="nav-link link text-black show display-4" href="#contacts" aria-expanded="true"><p>Контакты</p></a>
+                    </li>
+                </ul>
+
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="https://t.me/belarus_law_support_bot">Получить
+                    консультацию</a></div>
             </div>
         </div>
     </nav>
 </section>
 
 <section data-bs-version="5.1" class="header01 devicem5 cid-uxvqIElrEI" id="hero-1-uxvqIElrEI">
-    
-
-    
-    
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -173,97 +481,202 @@
                         <h1 class="mbr-section-title mbr-fonts-style display-2">Ваш&nbsp; Личный Юрист<br>Консультант Ожидает</h1>
                     </div>
                     <div class="text-wrap">
-                        <p class="mbr-text mbr-fonts-style display-7">Подключитесь к нашему Telegram боту для получения мгновенной юридической помощи онлайн!</p>
+                        <p class="mbr-text mbr-fonts-style display-7">Подключитесь к нашему Telegram боту для получения мгновенной юридической помощи
+                            онлайн!</p>
                     </div>
                     <div class="mbr-section-btn"><a class="btn btn-primary display-4" href="https://t.me/belarus_law_support_bot">
-                            <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
-                            Начать консультацию</a></div>
-                    <p class="mbr-desc mbr-fonts-style display-5">Правовая Консультация Онлайн Беларусь</p>
-                    
+                        <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
+                        Начать консультацию</a></div>
+                    <p class="mbr-desc mbr-fonts-style display-5">Правовая и Юридическая Консультация Онлайн Беларусь</p>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section data-bs-version="5.1" class="article03 devicem5 cid-uxvqIEmoiC" id="about-us-1-uxvqIEmoiC">
-    
+<section data-bs-version="5.1" class="features07 devicem5 cid-uxvqIEsWDf" id="features-1-uxvqIEsWDf">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="items-wrapper">
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+                                <h4 class="card-title mbr-fonts-style display-5">Начало Работы с Ботом</h4>
+                                <p class="card-text mbr-fonts-style display-7">1. Любой бот запускается путем отправки команды /start либо нажатием кнопки Start<br>2.
+                                    Изучить пункты меню Бота в Телеграм<br>3. Определить сколько вопросов потребуется задать Боту<br>4. Оплатить Услугу
+                                    используя Telegram Stars⭐️, если их нет, то в процессе Телеграм потребует сначала купить Звезды<br>3. Задавать вопросы Боту,&nbsp;подробные
+                                    и с максимальным количеством деталей</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+                                <h4 class="card-title mbr-fonts-style display-5">Эффективная Работа с Ботом</h4>
+                                <p class="card-text mbr-fonts-style display-7">1. Формулировать вопрос одним сообщением.<br>2. В сообщении предоставить как
+                                    можно больше деталей, касающихся вопроса.<br>3. После того, как полученный ответ Вас удовлетворил - обязательно нажмите
+                                    кнопку "Завершить этот разговор ✅"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+                                <h4 class="card-title mbr-fonts-style display-5">Звезды Telegram ⭐️</h4>
+                                <p class="card-text mbr-fonts-style display-7">Используются для оплаты услуг Бота. <br>Telegram Stars ⭐️ или Телеграм Звезды&nbsp;⭐️
+                                    - это внутренняя валюта приложения Telegram, используемая для оплаты товаров и услуг внутри приложения Telegram. Купить
+                                    звезды можно у официального Бота Телеграм @PremiumBot отправив ему команду /stars</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+                                <h4 class="card-title mbr-fonts-style display-5">Выгодная Покупка Звезд Telegram ⭐️<br></h4>
+                                <p class="card-text mbr-fonts-style display-7">Более выгодно покупать Звезды используя <strong>компьютер</strong>, а не
+                                    мобильное устройство, т.к. Apple и Google берут дополнительную комиссию с самого Telegram, таким образом на мобильных
+                                    устройствах цена Звезд выше.<br><br>Еще более выгодно Звезды можно приобрести, используя криптовалюту TON на сайте
+                                    https://split.tg/premium</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section data-bs-version="5.1" class="features04 devicem5 cid-uxvqIEu6s5" id="features-2-uxvqIEu6s5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Какие проблемы решает наш Бот?</h2>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="items-wrapper">
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+                                <h4 class="card-title mbr-fonts-style display-5">Трудность доступа к правовой информации</h4>
+                                <p class="card-text mbr-fonts-style display-7">Часто люди не знают, где искать актуальное законодательство или как его
+                                    применять. Бот предоставляет легкодоступные ответы на сложные вопросы.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+                                <h4 class="card-title mbr-fonts-style display-5">Сложность интерпретации закона</h4>
+                                <p class="card-text mbr-fonts-style display-7">Законы часто содержат сложные термины, которые непонятны без подготовки. Бот
+                                    объясняет законы понятным языком.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+                                <h4 class="card-title mbr-fonts-style display-5">Ограничения в доступе к юристам</h4>
+                                <p class="card-text mbr-fonts-style display-7">Нет времени или средств на консультации с профессиональными юристами.<br>Бот
+                                    выступает как первая линия помощи, особенно для срочных вопросов.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+                                <h4 class="card-title mbr-fonts-style display-5">Риск получения неверной информации</h4>
+                                <p class="card-text mbr-fonts-style display-7">Люди часто ищут ответы на форумах или в соцсетях, где информация может быть
+                                    недостоверной.<br>Бот использует только проверенные источники.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+                                <h4 class="card-title mbr-fonts-style display-5">Необходимость быстрого ответа</h4>
+                                <p class="card-text mbr-fonts-style display-7">Например, в ситуациях, связанных с трудовыми спорами, штрафами или налогами, где
+                                    нужна оперативная консультация.<br>Бот предоставляет ответы в считанные секунды.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-without-image item-mb">
+                        <div class="item-wrapper">
+                            <div class="card-box">
+                                <h4 class="card-title mbr-fonts-style display-5">Отсутствие личного опыта в юридических вопросах</h4>
+                                <p class="card-text mbr-fonts-style display-7">Бот помогает людям, которые не имеют опыта работы с законодательством, уверенно
+                                    принимать решения.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section data-bs-version="5.1" class="article06 devicem5 cid-uxvqIEql9a" id="about-me-3-uxvqIEql9a">
+    <div class="container-fluid">
+        <div class="row flex-row-reverse">
+            <div class="col-12 col-lg-6 card">
+                <div class="image-wrapper">
+                    <img src="images/tg.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 card">
+                <div class="content-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Напишите Боту</h2>
+                    <p class="mbr-text mbr-fonts-style display-7">Наш правовой Бот знает законодательство лучше, чем юрист с 40-летним стажем.</p>
+                    <div class="mbr-section-btn"><a class="btn btn-primary display-4" href="https://t.me/belarus_law_support_bot">Написать Сейчас!</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    
-    
-
+<section data-bs-version="5.1" class="features05 devicem5 cid-uxvqIEtZvT" id="product-gallery-1-uxvqIEtZvT">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <div class="title-wrapper">
-                    <h2 class="mbr-section-title mbr-fonts-style display-2">Кто мы?</h2>
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Наши услуги:</h2>
                 </div>
             </div>
-            <div class="col-12 col-lg-4">
-                <div class="desc-wrapper">
-                    <p class="mbr-desc mbr-fonts-style display-4">Legal Wizards</p>
+            <div class="items-wrapper">
+                <div class="item features-image">
+                    <div class="item-wrapper">
+                        <a href="https://t.me/belarus_law_support_bot">
+                            <div class="item-img">
+                                <div class="image-wrapper">
+                                    <img src="images/law3.jpg" alt="Написать Телеграм Боту для онлайн консультации по юридическим и правовым вопросам онлайн"></div>
+                                <div class="item-content">
+                                    <h4 class="card-title mbr-fonts-style display-5">Онлайн-консультация</h4>
+                                    <span class="mbr-iconfont mobi-mbri-right mobi-mbri"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="image-wrapper">
-                    <img src="images/photo-1585846328761-acbf5a12beea.jpeg" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-lg-8">
-                <div class="text-wrapper">
-                    <p class="mbr-text mbr-fonts-style display-5">Наша фирма "Юридические Консультации Онлайн Беларусь" является синтезом современных технологий и актуального законодательства, чтобы Вы могли получать консультации не выходя из дома</p>
+                <div class="item features-image">
+                    <div class="item-wrapper">
+                        <a href="#">
+                            <div class="item-img">
+                                <div class="image-wrapper">
+                                    <img src="images/law.jpg" alt="Написать Телеграм Боту для анализа контрактов и договоров онлайн"></div>
+                                <div class="item-content">
+                                    <h4 class="card-title mbr-fonts-style display-5">Анализ документов и контрактов (в разработке)</h4>
+                                    <span class="mbr-iconfont mobi-mbri-right mobi-mbri"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<section data-bs-version="5.1" class="article01 devicem5 cid-uxvqIEpVpg" id="about-us-4-uxvqIEpVpg">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-lg-4">
-                <div class="desc-wrapper">
-                    <p class="mbr-desc mbr-fonts-style display-4">Наша Миссия</p><p></p><p></p>
-                </div>
-            </div>
-			<div class="col-12 col-lg-8">
-				<div class="text-wrapper">
-					<p class="mbr-text mbr-fonts-style display-5">Сделать Юридические консультации доступными и распространенными. Так, чтобы как люди имели доступ к достоверной правовой информации по цене кружки кофе.</p>
-				</div>
-			</div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="article01 devicem5 cid-uxvqIEpWlo" id="about-me-4-uxvqIEpWlo">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-lg-4">
-                <div class="desc-wrapper">
-                    <p class="mbr-desc mbr-fonts-style display-4">Наше Кредо</p>
-                </div>
-            </div>
-			<div class="col-12 col-lg-8">
-				<div class="text-wrapper">
-					<p class="mbr-text mbr-fonts-style display-5">Помощь Вам 24 часа в сутки 7 дней в неделю.</p>
-				</div>
-			</div>
-        </div>
-    </div>
-</section>
-
 <section data-bs-version="5.1" class="slider01 mbr-embla devicem5 cid-uxvqIEqLQG" id="features-6-uxvqIEqLQG">
-    
-    
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -289,7 +702,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="embla__slide slider-image item features-without-image" style="margin-left: 1rem; margin-right: 1rem;">
                                 <div class="slide-content">
                                     <div class="item-wrapper">
@@ -316,7 +729,7 @@
                                         <div class="icon-wrapper">
                                             <span class="mbr-iconfont mbri-clock"></span>
                                             <p class="mbr-number mbr-fonts-style display-4">
-                                                04
+                                                03
                                             </p>
                                         </div>
                                     </div>
@@ -332,12 +745,13 @@
                                         <div class="icon-wrapper">
                                             <span class="mbr-iconfont mbri-protect"></span>
                                             <p class="mbr-number mbr-fonts-style display-4">
-                                                05
+                                                04
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                            </div><div class="embla__slide slider-image item features-without-image" style="margin-left: 1rem; margin-right: 1rem;">
+                            </div>
+                            <div class="embla__slide slider-image item features-without-image" style="margin-left: 1rem; margin-right: 1rem;">
                                 <div class="slide-content">
                                     <div class="item-wrapper">
                                         <div class="item-content">
@@ -347,7 +761,7 @@
                                         <div class="icon-wrapper">
                                             <span class="mbr-iconfont mbri-star"></span>
                                             <p class="mbr-number mbr-fonts-style display-4">
-                                                03
+                                                05
                                             </p>
                                         </div>
                                     </div>
@@ -357,11 +771,11 @@
                     </div>
                     <button class="embla__button embla__button--prev">
                         <span class="mbr-iconfont mobi-mbri-left mobi-mbri" aria-hidden="true"></span>
-                        <span class="sr-only visually-hidden visually-hidden visually-hidden visually-hidden">Previous</span>
+                        <span class="sr-only visually-hidden visually-hidden visually-hidden visually-hidden">Следующий</span>
                     </button>
                     <button class="embla__button embla__button--next">
                         <span class="mbr-iconfont mobi-mbri-right mobi-mbri" aria-hidden="true"></span>
-                        <span class="sr-only visually-hidden visually-hidden visually-hidden visually-hidden">Next</span>
+                        <span class="sr-only visually-hidden visually-hidden visually-hidden visually-hidden">Предыдущий</span>
                     </button>
                 </div>
             </div>
@@ -369,298 +783,104 @@
     </div>
 </section>
 
-<section data-bs-version="5.1" class="article06 devicem5 cid-uxvqIEql9a" id="about-me-3-uxvqIEql9a">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row flex-row-reverse">
-            <div class="col-12 col-lg-6 card">
-                <div class="image-wrapper">
-                    <img src="images/photo-1585846328761-acbf5a12beea.jpeg" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-lg-6 card">
-                <div class="content-wrapper">
-                    <h2 class="mbr-section-title mbr-fonts-style display-2">Присоединяйтесь</h2>
-                    <p class="mbr-text mbr-fonts-style display-7">Наш правовой Бот знает законодательство лучше, чем юрист с 40-летним стажем.</p>
-                    <div class="mbr-section-btn"><a class="btn btn-primary display-4" href="#">Присоединиться Сейчас!</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="features07 devicem5 cid-uxvqIEsWDf" id="features-1-uxvqIEsWDf">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="items-wrapper">
-                    <div class="item features-without-image item-mb">
-                        <div class="item-wrapper">
-                            <div class="card-box">
-                                <h4 class="card-title mbr-fonts-style display-5">Начало Работы с Ботом</h4>
-                                <p class="card-text mbr-fonts-style display-7">1. Любой бот запускается путем отправки команды /start либо нажатием кнопки Start<br>2. Изучить пункты меню Бота в Телеграм<br>3. Определить сколько вопросов потребуется задать Боту<br>4. Оплатить Услугу используя Telegram Stars⭐️, если их нет, то в процессе Телеграм потребует сначала купить Звезды<br>3. Задавать вопросы Боту,&nbsp;подробные и с максимальным количеством деталей</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item features-without-image item-mb">
-                        <div class="item-wrapper">
-                            <div class="card-box">
-                                <h4 class="card-title mbr-fonts-style display-5">Эффективная Работа с Ботом</h4>
-                                <p class="card-text mbr-fonts-style display-7">1. Формулировать вопрос одним сообщением.<br>2. В сообщении предоставить как можно больше деталей, касающихся вопроса.<br>3. После того, как полученный ответ Вас удовлетворил - обязательно нажмите кнопку "Завершить этот разговор ✅"</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item features-without-image item-mb">
-                        <div class="item-wrapper">
-                            <div class="card-box">
-                                <h4 class="card-title mbr-fonts-style display-5">Звезды Telegram ⭐️</h4>
-                                <p class="card-text mbr-fonts-style display-7">Используются для оплаты услуг Бота. <br>Telegram Stars ⭐️ или Телеграм Звезды&nbsp;⭐️ - это внутренняя валюта приложения Telegram, используемая для оплаты товаров и услуг внутри приложения Telegram. Купить звезды можно у официального Бота Телеграм @PremiumBot отправив ему команду /stars</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item features-without-image item-mb">
-                        <div class="item-wrapper">
-                            <div class="card-box">
-                                <h4 class="card-title mbr-fonts-style display-5">Выгодная Покупка Звезд Telegram ⭐️<br></h4>
-                                <p class="card-text mbr-fonts-style display-7">Более выгодно покупать Звезды используя <strong>компьютер</strong>, а не мобильное устройство, т.к. Apple и Google берут дополнительную комиссию с самого Telegram, таким образом на мобильных устройствах цена Звезд выше.<br><br>Еще более выгодно Звезды можно приобрести, используя криптовалюту TON на сайте https://split.tg/premium</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="features05 devicem5 cid-uxvqIEtZvT" id="product-gallery-1-uxvqIEtZvT">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="title-wrapper">
-                    <h2 class="mbr-section-title mbr-fonts-style display-2">Наши услуги:</h2>
-                </div>
-            </div>
-            <div class="items-wrapper">
-                <div class="item features-image">
-                    <div class="item-wrapper">
-                        <a href="https://t.me/belarus_law_support_bot">
-                            <div class="item-img">
-                                <div class="image-wrapper">
-                                <img src="images/photo-1585846328761-acbf5a12beea.jpeg" alt=""></div>
-                                <div class="item-content">
-                                    <h4 class="card-title mbr-fonts-style display-5">Онлайн-консультация</h4>
-                                    <span class="mbr-iconfont mobi-mbri-right mobi-mbri"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="item features-image">
-                    <div class="item-wrapper">
-                        <a href="#">
-                            <div class="item-img">
-                                <div class="image-wrapper">
-                                 <img src="images/photo-1585846328761-acbf5a12beea.jpeg" alt=""></div>
-                                <div class="item-content">
-                                    <h4 class="card-title mbr-fonts-style display-5">Анализ документов и контрактов (в разработке)</h4>
-                                    <span class="mbr-iconfont mobi-mbri-right mobi-mbri"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="features04 devicem5 cid-uxvqIEu6s5" id="features-2-uxvqIEu6s5">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-lg-6">
-                <div class="title-wrapper">
-                    <h2 class="mbr-section-title mbr-fonts-style display-2">Какие проблемы решает наш Бот?</h2>
-                </div>
-            </div>
-            <div class="col-12 col-lg-5">
-                <div class="items-wrapper">
-                    <div class="item features-without-image item-mb">
-                        <div class="item-wrapper">
-                            <div class="card-box">
-                                <h4 class="card-title mbr-fonts-style display-5">Трудность доступа к правовой информации</h4>
-                                <p class="card-text mbr-fonts-style display-7">Часто люди не знают, где искать актуальное законодательство или как его применять. Бот предоставляет легкодоступные ответы на сложные вопросы.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item features-without-image item-mb">
-                        <div class="item-wrapper">
-                            <div class="card-box">
-                                <h4 class="card-title mbr-fonts-style display-5">Сложность интерпретации закона</h4>
-                                <p class="card-text mbr-fonts-style display-7">Законы часто содержат сложные термины, которые непонятны без подготовки. Бот объясняет законы понятным языком.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item features-without-image item-mb">
-                        <div class="item-wrapper">
-                            <div class="card-box">
-                                <h4 class="card-title mbr-fonts-style display-5">Ограничения в доступе к юристам</h4>
-                                <p class="card-text mbr-fonts-style display-7">Нет времени или средств на консультации с профессиональными юристами.<br>Бот выступает как первая линия помощи, особенно для срочных вопросов.</p>
-                            </div>
-                        </div>
-                    </div><div class="item features-without-image item-mb">
-                        <div class="item-wrapper">
-                            <div class="card-box">
-                                <h4 class="card-title mbr-fonts-style display-5">Риск получения неверной информации</h4>
-                                <p class="card-text mbr-fonts-style display-7">Люди часто ищут ответы на форумах или в соцсетях, где информация может быть недостоверной.<br>Бот использует только проверенные источники.</p>
-                            </div>
-                        </div>
-                    </div><div class="item features-without-image item-mb">
-                        <div class="item-wrapper">
-                            <div class="card-box">
-                                <h4 class="card-title mbr-fonts-style display-5">Необходимость быстрого ответа</h4>
-                                <p class="card-text mbr-fonts-style display-7">Например, в ситуациях, связанных с трудовыми спорами, штрафами или налогами, где нужна оперативная консультация.<br>Бот предоставляет ответы в считанные секунды.</p>
-                            </div>
-                        </div>
-                    </div><div class="item features-without-image item-mb">
-                        <div class="item-wrapper">
-                            <div class="card-box">
-                                <h4 class="card-title mbr-fonts-style display-5">Отсутствие личного опыта в юридических вопросах</h4>
-                                <p class="card-text mbr-fonts-style display-7">Бот помогает людям, которые не имеют опыта работы с законодательством, уверенно принимать решения.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section data-bs-version="5.1" class="pricing01 devicem5 cid-uxvqIExRLH" id="product-list-1-uxvqIExRLH">
-    
-
-    
-    
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 item">
                 <div class="title-wrapper">
-                    <h2 class="mbr-section-title mbr-fonts-style display-2">Наши Услуги</h2>
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Наши Тарифы</h2>
                 </div>
             </div>
             <div class="item features-image col-12 col-lg-4">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="images/photo-1585846328761-acbf5a12beea.jpeg" alt="">
+                        <img src="images/5.png" alt="Получить ответ на 5 вопросов юриста">
                     </div>
                     <div class="item-content">
                         <p class="card-price mbr-fonts-style display-5">Ответы на 5 вопросов</p>
                         <h4 class="card-title mbr-fonts-style display-5">150 Звезд Телеграм ⭐️</h4>
                         <p class="card-desc mbr-fonts-style display-7"></p>
-                        <div class="mbr-section-btn"><a class="btn btn-black-outline display-4" href="#">
-                                <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
-                                Get Started
-                            </a></div>
+                        <div class="mbr-section-btn"><a class="btn btn-black-outline display-4">
+                            <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
+                            10 рублей
+                        </a></div>
                     </div>
                 </div>
             </div>
             <div class="item features-image col-12 col-lg-4">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="images/photo-1585846328761-acbf5a12beea.jpeg" alt="">
+                        <img src="images/10.png" alt="задать 10 вопросов адвокату">
                     </div>
                     <div class="item-content">
                         <p class="card-price mbr-fonts-style display-5">Ответы на 10 вопросов</p>
                         <h4 class="card-title mbr-fonts-style display-5">250 Звезд Телеграм ⭐️</h4>
-                        <p class="card-desc mbr-fonts-style display-7">Unlock premium articles on legal topics.</p>
-                        <div class="mbr-section-btn"><a class="btn btn-black-outline display-4" href="#">
-                                <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
-                                Get Started
-                            </a></div>
+                        <div class="mbr-section-btn"><a class="btn btn-black-outline display-4">
+                            <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
+                            16 рублей
+                        </a></div>
                     </div>
                 </div>
             </div>
             <div class="item features-image col-12 col-lg-4">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="images/photo-1585846328761-acbf5a12beea.jpeg" alt="">
+                        <img src="images/20.png" alt="получить ответ на 20 вопросов юрист консультанту">
                     </div>
                     <div class="item-content">
                         <p class="card-price mbr-fonts-style display-5">Ответ на 20 вопросов</p>
                         <h4 class="card-title mbr-fonts-style display-5">400 Звезд Телеграм ⭐️</h4>
-                        <p class="card-desc mbr-fonts-style display-7">In-depth review of your legal documents.</p>
-                        <div class="mbr-section-btn"><a class="btn btn-black-outline display-4" href="#">
-                                <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
-                                Get Started
-                                
-                            </a></div>
+                        <div class="mbr-section-btn"><a class="btn btn-black-outline display-4">
+                            <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
+                            25 рублей
+                        </a></div>
                     </div>
                 </div>
-            </div><div class="item features-image col-12 col-lg-4">
+            </div>
+            <div class="item features-image col-12 col-lg-4">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="images/g99745d8e3be64755ac95e767986e-h_m4wwpqaj.jpg" alt="" data-slide-to="4">
+                        <img src="images/50.png" alt="задать 50 вопрос консультанту юристу" data-slide-to="4">
                     </div>
                     <div class="item-content">
-                        <p class="card-price mbr-fonts-style display-5">$100 USD</p>
-                        <h4 class="card-title mbr-fonts-style display-5">Full Legal Review</h4>
-                        <p class="card-desc mbr-fonts-style display-7">In-depth review of your legal documents.</p>
-                        <div class="mbr-section-btn"><a class="btn btn-black-outline display-4" href="#">
-                                <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
-                                Get Started
-                                
-                            </a></div>
+                        <p class="card-price mbr-fonts-style display-5">Ответ на 50 вопросов</p>
+                        <h4 class="card-title mbr-fonts-style display-5">1000 Звезд Телеграм ⭐️</h4>
+                        <div class="mbr-section-btn"><a class="btn btn-black-outline display-4">
+                            <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
+                            62 рубля
+                        </a></div>
                     </div>
                 </div>
-            </div><div class="item features-image col-12 col-lg-4">
+            </div>
+            <div class="item features-image col-12 col-lg-4">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="images/g99745d8e3be64755ac95e767986e-h_m4wwqegn.jpg" alt="" data-slide-to="5">
+                        <img src="images/100.png" alt="100 вопросов телеграм боту" data-slide-to="5">
                     </div>
                     <div class="item-content">
-                        <p class="card-price mbr-fonts-style display-5">$100 USD</p>
-                        <h4 class="card-title mbr-fonts-style display-5">Full Legal Review</h4>
-                        <p class="card-desc mbr-fonts-style display-7">In-depth review of your legal documents.</p>
+                        <p class="card-price mbr-fonts-style display-5">Ответ на 100 вопросов</p>
+                        <h4 class="card-title mbr-fonts-style display-5">1500 Звезд Телеграм ⭐️</h4>
                         <div class="mbr-section-btn"><a class="btn btn-black-outline display-4" href="#">
-                                <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
-                                Get Started
-                                
-                            </a></div>
+                            <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
+                            92 рубля
+
+                        </a></div>
                     </div>
                 </div>
-            </div><div class="item features-image col-12 col-lg-4">
+            </div>
+            <div class="item features-image col-12 col-lg-4">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="images/g99745d8e3be64755ac95e767986e-h_m4wwqhjm.jpg" alt="" data-slide-to="6">
+                        <img src="images/200.png" alt="200 вопросов консультанту" data-slide-to="6">
                     </div>
                     <div class="item-content">
-                        <p class="card-price mbr-fonts-style display-5">$100 USD</p>
-                        <h4 class="card-title mbr-fonts-style display-5">Full Legal Review</h4>
-                        <p class="card-desc mbr-fonts-style display-7">In-depth review of your legal documents.</p>
+                        <p class="card-price mbr-fonts-style display-5">Ответ на 200 вопросов</p>
+                        <h4 class="card-title mbr-fonts-style display-5">2500 Звезд Телеграм ⭐️</h4>
                         <div class="mbr-section-btn"><a class="btn btn-black-outline display-4" href="#">
-                                <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
-                                Get Started
-                                
-                            </a></div>
+                            <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
+                            154 рубля
+                        </a></div>
                     </div>
                 </div>
             </div>
@@ -669,11 +889,6 @@
 </section>
 
 <section data-bs-version="5.1" class="header01 devicem5 cid-uxvqIEyB77" id="call-to-action-1-uxvqIEyB77">
-    
-
-    
-    
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -685,10 +900,10 @@
                         <p class="mbr-text mbr-fonts-style display-7">Получите правовую консультацию прямо сейчас, не вставая с дивана.</p>
                     </div>
                     <div class="mbr-section-btn"><a class="btn btn-primary display-4" href="https://t.me/belarus_law_support_bot">
-                            <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
+                        <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
                         Написать Боту</a></div>
-                    
-                   
+
+
                 </div>
             </div>
         </div>
@@ -696,12 +911,7 @@
 </section>
 
 <section data-bs-version="5.1" class="list01 devicem5 cid-uxvqIEDFaZ" id="faq-1-uxvqIEDFaZ">
-    
-
-    
-    
-
-    <div class="container-fluid">
+    <div class="container-fluid" id="faq">
         <div class="row">
             <div class="col-12">
                 <div class="title-wrapper">
@@ -710,7 +920,8 @@
                 <div id="bootstrap-accordion_12" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
                     <div class="card">
                         <div class="card-header" role="tab" id="headingOne">
-                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_12" aria-expanded="false" aria-controls="collapse1">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_12"
+                               aria-expanded="false" aria-controls="collapse1">
                                 <div class="panel-wrap">
                                     <p class="panel-number mbr-fonts-style display-4">
                                         01
@@ -722,16 +933,20 @@
                                 </div>
                             </a>
                         </div>
-                        <div id="collapse1_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_12">
+                        <div id="collapse1_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion"
+                             data-bs-parent="#bootstrap-accordion_12">
                             <div class="panel-body">
                                 <div class="panel-padding"></div>
-                                <p class="mbr-fonts-style panel-text display-7">На данный момент только ответы на юридические и правовые вопросы по Законодательству Республики Беларусь через Telegram бота. В будущем мы планируем предоставить услугу анализа контрактов и договоров.</p>
+                                <p class="mbr-fonts-style panel-text display-7">На данный момент только ответы на юридические и правовые вопросы по
+                                    Законодательству Республики Беларусь через Telegram бота. В будущем мы планируем предоставить услугу анализа контрактов и
+                                    договоров.</p>
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header" role="tab" id="headingTwo">
-                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse2_12" aria-expanded="false" aria-controls="collapse2">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse2_12"
+                               aria-expanded="false" aria-controls="collapse2">
                                 <div class="panel-wrap">
                                     <p class="panel-number mbr-fonts-style display-4">
                                         02
@@ -743,16 +958,19 @@
                                 </div>
                             </a>
                         </div>
-                        <div id="collapse2_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_12">
+                        <div id="collapse2_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion"
+                             data-bs-parent="#bootstrap-accordion_12">
                             <div class="panel-body">
                                 <div class="panel-padding"></div>
-                                <p class="mbr-fonts-style panel-text display-7">1. Нажать кнопку 'Получить консультацию' выше! <br>2. Перейти в Телеграм Бот.<br>3. Выбрать и оплатить тариф.<br>4. Начать задавать вопросы.</p>
+                                <p class="mbr-fonts-style panel-text display-7">1. Нажать кнопку 'Получить консультацию' выше! <br>2. Перейти в Телеграм
+                                    Бот.<br>3. Выбрать и оплатить тариф.<br>4. Начать задавать вопросы.</p>
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header" role="tab" id="headingThree">
-                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse3_12" aria-expanded="false" aria-controls="collapse3">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse3_12"
+                               aria-expanded="false" aria-controls="collapse3">
                                 <div class="panel-wrap">
                                     <p class="panel-number mbr-fonts-style display-4">
                                         03
@@ -764,7 +982,8 @@
                                 </div>
                             </a>
                         </div>
-                        <div id="collapse3_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_12">
+                        <div id="collapse3_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion"
+                             data-bs-parent="#bootstrap-accordion_12">
                             <div class="panel-body">
                                 <div class="panel-padding"></div>
                                 <p class="mbr-fonts-style panel-text display-7">Безопасность информации является нашим приоритетом и надежно защищена.</p>
@@ -773,7 +992,8 @@
                     </div>
                     <div class="card">
                         <div class="card-header" role="tab" id="headingFour">
-                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse4_12" aria-expanded="false" aria-controls="collapse4">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse4_12"
+                               aria-expanded="false" aria-controls="collapse4">
                                 <div class="panel-wrap">
                                     <p class="panel-number mbr-fonts-style display-4">
                                         04
@@ -785,7 +1005,8 @@
                                 </div>
                             </a>
                         </div>
-                        <div id="collapse4_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_12">
+                        <div id="collapse4_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion"
+                             data-bs-parent="#bootstrap-accordion_12">
                             <div class="panel-body">
                                 <div class="panel-padding"></div>
                                 <p class="mbr-fonts-style panel-text display-7">Да, также имеет смысл предоставить как можно больше деталей.</p>
@@ -794,7 +1015,8 @@
                     </div>
                     <div class="card">
                         <div class="card-header" role="tab" id="headingFive">
-                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse5_12" aria-expanded="false" aria-controls="collapse5">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse5_12"
+                               aria-expanded="false" aria-controls="collapse5">
                                 <div class="panel-wrap">
                                     <p class="panel-number mbr-fonts-style display-4">
                                         05
@@ -806,16 +1028,19 @@
                                 </div>
                             </a>
                         </div>
-                        <div id="collapse5_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_12">
+                        <div id="collapse5_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion"
+                             data-bs-parent="#bootstrap-accordion_12">
                             <div class="panel-body">
                                 <div class="panel-padding"></div>
-                                <p class="mbr-fonts-style panel-text display-7">У нас есть множество тарифов, в зависимости от количества ваших вопросов. Наиболее оптимальным является тариф на 10 вопросов.</p>
+                                <p class="mbr-fonts-style panel-text display-7">У нас есть множество тарифов, в зависимости от количества ваших вопросов.
+                                    Наиболее оптимальным является тариф на 10 вопросов.</p>
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header" role="tab" id="headingSix">
-                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse6_12" aria-expanded="false" aria-controls="collapse6">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse6_12"
+                               aria-expanded="false" aria-controls="collapse6">
                                 <div class="panel-wrap">
                                     <p class="panel-number mbr-fonts-style display-4">
                                         06
@@ -827,10 +1052,35 @@
                                 </div>
                             </a>
                         </div>
-                        <div id="collapse6_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_12">
+                        <div id="collapse6_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion"
+                             data-bs-parent="#bootstrap-accordion_12">
                             <div class="panel-body">
                                 <div class="panel-padding"></div>
                                 <p class="mbr-fonts-style panel-text display-7">Обычно ответы занимают не больше минуты.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingSeven">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse7_12"
+                               aria-expanded="false" aria-controls="collapse6">
+                                <div class="panel-wrap">
+                                    <p class="panel-number mbr-fonts-style display-4">
+                                        07
+                                    </p>
+                                    <h4 class="panel-title-edit mbr-fonts-style display-5">Что такое звезды Телеграм⭐️?</h4>
+                                </div>
+                                <div class="icon-wrapper">
+                                    <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="collapse7_12" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingSeven" data-parent="#accordion"
+                             data-bs-parent="#bootstrap-accordion_12">
+                            <div class="panel-body">
+                                <div class="panel-padding"></div>
+                                <p class="mbr-fonts-style panel-text display-7">Внутренняя валюта приложения Telegram, с помощью которой происходит оплата услугу бота.
+                                    Их можно приобрести внутри приложения Telegram, а также на сторонних сайтах.</p>
                             </div>
                         </div>
                     </div>
@@ -841,11 +1091,6 @@
 </section>
 
 <section data-bs-version="5.1" class="features01 devicem5 cid-uxvqIEyOFN" id="features-4-uxvqIEyOFN">
-    
-
-    
-    
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -878,11 +1123,13 @@
                             </div>
                         </div>
                         <div class="text-wrap">
-                            <p class="card-text mbr-fonts-style display-7">Помощь для физических лиц, предпринимателей и организаций при полной анонимности.<br></p>
+                            <p class="card-text mbr-fonts-style display-7">Помощь для физических лиц, предпринимателей и организаций при полной анонимности.<br>
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div><div class="item features-without-image col-12 col-lg-4 item-mb">
+            </div>
+            <div class="item features-without-image col-12 col-lg-4 item-mb">
                 <div class="item-wrapper">
                     <div class="card-box">
                         <div class="title-wrapper">
@@ -892,129 +1139,99 @@
                             </div>
                         </div>
                         <div class="text-wrap">
-                            <p class="card-text mbr-fonts-style display-7">Мы используем актуальную базу знаний законодательства �&nbsp;еспублики Беларусь.</p>
+                            <p class="card-text mbr-fonts-style display-7">Мы используем актуальную базу знаний законодательства Республики Беларусь.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>
 
-<section data-bs-version="5.1" class="article03 devicem5 cid-uxvqIEEHdm" id="generic-text-2-uxvqIEEHdm">
-    
 
-    
-    
 
+<section data-bs-version="5.1" class="article03 devicem5 cid-uxvqIEmoiC" id="about">
     <div class="container-fluid">
-        <div class="row flex-row-reverse">
+        <div class="row">
             <div class="col-12">
                 <div class="title-wrapper">
-                    <h2 class="mbr-section-title mbr-fonts-style display-2">База Знаний и Статей</h2>
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Кто мы?</h2>
                 </div>
             </div>
             <div class="col-12 col-lg-4">
                 <div class="desc-wrapper">
-                    <p class="mbr-desc mbr-fonts-style display-4">Knowledge is Power</p>
+                    <p class="mbr-desc mbr-fonts-style display-4">Основатель</p>
                 </div>
                 <div class="image-wrapper">
-                    <img src="images/photo-1585846328761-acbf5a12beea.jpeg" alt="">
+                    <img src="images/consultant.jpg" alt="">
                 </div>
             </div>
             <div class="col-12 col-lg-8">
                 <div class="text-wrapper">
-                    <p class="mbr-text mbr-fonts-style display-5">Dive into our treasure trove of articles! From contract tips to understanding your rights, we’ve got the legal knowledge you need to navigate life like a pro.</p>
+                    <p class="mbr-text mbr-fonts-style display-5">Наша фирма "Юридические Консультации Онлайн Беларусь" является синтезом современных технологий
+                        и актуального законодательства, чтобы Вы могли получать консультации не выходя из дома</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<section data-bs-version="5.1" class="features03 devicem5 cid-uxvqIEFLBd" id="news-1-uxvqIEFLBd">
-    
-
-    
-    
-
+<section data-bs-version="5.1" class="article01 devicem5 cid-uxvqIEpVpg" id="about-us-4-uxvqIEpVpg">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 item">
-                <div class="title-wrapper">
-                    <h2 class="mbr-section-title mbr-fonts-style display-2">Последние Статьи:</h2>
+            <div class="col-12 col-lg-4">
+                <div class="desc-wrapper">
+                    <p class="mbr-desc mbr-fonts-style display-4">Наша Миссия</p>
+                    <p></p>
+                    <p></p>
                 </div>
             </div>
-            <div class="item features-image col-12 col-lg-4">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="images/photo-1585846328761-acbf5a12beea.jpeg" alt="">
-                    </div>
-                    <div class="item-content">
-                        <p class="card-date mbr-fonts-style display-4">December 15, 2024</p>
-                        <h4 class="card-title mbr-fonts-style display-5">New Year, New Legal Tips!</h4>
-                        <div class="mbr-section-btn">
-                            <a class="btn btn-primary-outline display-4" href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item features-image col-12 col-lg-4">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="images/photo-1585846328761-acbf5a12beea.jpeg" alt="">
-                    </div>
-                    <div class="item-content">
-                        <p class="card-date mbr-fonts-style display-4">December 10, 2024</p>
-                        <h4 class="card-title mbr-fonts-style display-5">Understanding Legal Jargon Simplified</h4>
-                        <div class="mbr-section-btn"><a class="btn btn-primary-outline display-4" href="#">Read More</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="item features-image col-12 col-lg-4">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="images/photo-1585846328761-acbf5a12beea.jpeg" alt="">
-                    </div>
-                    <div class="item-content">
-                        <p class="card-date mbr-fonts-style display-4">December 5, 2024</p>
-                        <h4 class="card-title mbr-fonts-style display-5">Top 5 Legal Myths Busted!</h4>
-                        <div class="mbr-section-btn">
-                            <a class="btn btn-primary-outline display-4" href="#">Read More</a>
-                        </div>
-                    </div>
+            <div class="col-12 col-lg-8">
+                <div class="text-wrapper">
+                    <p class="mbr-text mbr-fonts-style display-5">Сделать Юридические консультации доступными и распространенными. Так, чтобы как люди имели
+                        доступ к достоверной правовой информации по цене кружки кофе.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-
+<section data-bs-version="5.1" class="article01 devicem5 cid-uxvqIEpWlo" id="about-me-4-uxvqIEpWlo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="desc-wrapper">
+                    <p class="mbr-desc mbr-fonts-style display-4">Наше Кредо</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8">
+                <div class="text-wrapper">
+                    <p class="mbr-text mbr-fonts-style display-5">Помощь Вам 24 часа в сутки 7 дней в неделю.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section data-bs-version="5.1" class="footer01 devicem5 cid-uxvqIEF6Kj" once="footers" id="footer-1-uxvqIEF6Kj">
-    
-
-    
-    
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-lg-7">
                 <div class="title-wrapper">
-                    <h2 class="mbr-section-title mbr-fonts-style display-1">Legal Bot</h2>
+                    <h2 class="mbr-section-title mbr-fonts-style display-1">Юридическая Консультация Онлайн Беларусь</h2>
                 </div>
             </div>
-			<div class="col-12 col-lg-5">
+            <div class="col-12 col-lg-5">
                 <div class="nav-wrapper">
                     <ul class="list mbr-fonts-style display-7">
-                        <li class="item-wrap">Home Page</li>
-                        <li class="item-wrap">About Us</li>
-                        <li class="item-wrap">Legal Articles</li>
-                        <li class="item-wrap">FAQs</li>
-                        <li class="item-wrap">Contact Us</li>
+                        <li class="item-wrap">Главная страница</li>
+                        <li class="item-wrap"><a href="#about" class="text-black">О нас</a></li>
+                        <li class="item-wrap"><a href="#blog" class="text-black">Статьи</a></li>
+                        <li class="item-wrap"><a href="#faq" class="text-black">FAQ</a></li>
+                        <li class="item-wrap"><a href="#contacts" class="text-black">Контакты</a></li>
                     </ul>
                 </div>
-			</div>
+            </div>
             <div class="col-12">
                 <div class="border-wrap"></div>
                 <p class="mbr-copy mbr-fonts-style display-4">© 2024 консультация.бел<br>Все права защищены.</p>
@@ -1024,18 +1241,16 @@
 </section>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/smooth-scroll.js"></script>
-  <script src="js/index.js"></script>
-  <script src="js/navbar-dropdown.js"></script>
-  <script src="js/embla.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/mbr-switch-arrow.js"></script>
-  <script src="js/script_1.js"></script>
-  
-  
-  
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/smooth-scroll.js"></script>
+<script src="js/index.js"></script>
+<script src="js/navbar-dropdown.js"></script>
+<script src="js/embla.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/mbr-switch-arrow.js"></script>
+<script src="js/script_1.js"></script>
 
 
-</body></html>
+</body>
+</html>
