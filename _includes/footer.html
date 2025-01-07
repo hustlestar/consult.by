@@ -1,0 +1,33 @@
+<section data-bs-version="5.1" class="footer01 devicem5 cid-uxvqIEF6Kj" once="footers" id="footer-1-uxvqIEF6Kj">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Юридическая Консультация Онлайн Беларусь</h2>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="nav-wrapper">
+                    <ul class="list mbr-fonts-style display-7">
+                        {% if page.url != "/" || page.url != "index.html" %}
+                        <li class="item-wrap"><a href="../index.html">Главная страница</a></li>
+                        <li class="item-wrap"><a href="../index.html#about">О нас</a></li>
+                        <li class="item-wrap"><a href="../index.html#blog">Статьи</a></li>
+                        <li class="item-wrap"><a href="../contacts.html">Контакты</a></li>
+                        <li class="item-wrap"><a href="../index.html#faq">FAQ</a></li>
+                        {% else %}
+                        <li class="item-wrap"><a href="#about">О нас</a></li>
+                        <li class="item-wrap"><a href="#blog">Статьи</a></li>
+                        <li class="item-wrap"><a href="../contacts.html">Контакты</a></li>
+                        <li class="item-wrap"><a href="#faq">FAQ</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="border-wrap"></div>
+                <p class="mbr-copy mbr-fonts-style display-4">© 2024 <a href="https://консультация.бел">консультация.бел</a><br>Все права защищены.</p>
+            </div>
+        </div>
+    </div>
+</section>
