@@ -1,0 +1,67 @@
+---
+layout: page
+title: Блог правового Бота "Юридическая Консультация Онлайн Беларусь"
+meta_content_description: Статьи и Инструкции от команды Бота юридической помощи
+meta_keywords: юрист, адвокат, блог, статьи, консультация, беларусь, закон, Республика Беларусь, права
+meta_og_url: https://консультация.бел/blog.html
+link_canonical: https://консультация.бел/blog.html
+---
+<!--<section data-bs-version="5.1" class="article03 devicem5 cid-uxvqIEEHdm">-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="row flex-row-reverse">-->
+<!--            <div class="col-12">-->
+<!--                <div class="title-wrapper">-->
+<!--                    <h2 class="mbr-section-title mbr-fonts-style display-2">База Знаний и Статей</h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-12 col-lg-3">-->
+<!--                <div class="desc-wrapper">-->
+<!--                    <p class="mbr-desc mbr-fonts-style display-4">Знание - сила</p>-->
+<!--                </div>-->
+<!--                <div class="image-wrapper">-->
+<!--                    <img src="../images/photo-1585846328761-acbf5a12beea.jpeg" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-12 col-lg-9">-->
+<!--                <div class="text-wrapper">-->
+<!--                    <p class="mbr-text mbr-fonts-style display-5">Dive into our treasure trove of articles! From contract tips to understanding your rights,-->
+<!--                        we’ve got the legal knowledge you need to navigate life like a pro.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<section data-bs-version="5.1" class="features03 devicem5 cid-uxvqIEFLBd" id="blog">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 item">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Новости и Статьи:</h2>
+                </div>
+            </div>
+            {% for post in site.posts %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 d-none d-lg-block">
+                        <a href="{{ post.permalink }}">
+                            {% if post.image != "" %}
+                            <img src="{{post.image}}" alt="{{ post.image_alt }}">
+                            {% else %}
+                            <img src="../images/photo-1585846328761-acbf5a12beea.jpeg" alt="">
+                            {% endif %}
+                        </a>
+                    </div>
+                    <div class="item-content col-10">
+                        <p class="mbr-fonts-style display-4">{{ post.date | date: "%Y-%m-%d" }}</p>
+                        <h4 class="mbr-fonts-style display-5">
+                            <a class="text-black display-5" href="{{ post.permalink }}">{{ post.title }}</a>
+                        </h4>
+                    </div>
+                </div>
+                <br>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

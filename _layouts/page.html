@@ -6,8 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="../images/gaa16605b72588e2946ca57bbc197-h_m4wv30wq.png" type="image/x-icon">
+    {% if page.link_canonical != "" %}
+    <link rel="canonical" href="{{ page.link_canonical }}">
+    {% endif %}
     {% if page.meta_content_description != "" %}
     <meta name="description" content="{{ page.meta_content_description }}">
+    {% endif %}
+    {% if page.meta_keywords != "" %}
+    <meta name="keywords" content="{{ page.meta_keywords }}">
     {% endif %}
     <link rel="stylesheet" href="../css/mobirise2.css">
     <link rel="stylesheet" href="../css/mobirise-icons.css">
